@@ -1,0 +1,17 @@
+react.min:
+  version: VERSION
+  js:
+    /libraries/reactjs/build/react.development.js: {}
+
+react.dom.min:
+  version: VERSION
+  js:
+    /libraries/reactjs/build/react-dom.development.js: {}
+
+react.block:
+  version: VERSION
+  js:
+    build/static/js/main.js: {}
+  css:
+    theme:
+      build/static/css/main.css: {}

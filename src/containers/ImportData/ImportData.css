@@ -1,0 +1,153 @@
+.portfolio-type {
+    cursor: pointer;
+}
+
+.portfolio-type:hover,
+.portfolio-type:focus {
+    opacity: 0.5;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+.grid {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.grid-item {
+    font-size: 0;
+    line-height: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 15px solid white;
+    flex: auto;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+
+.grid-item img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-height: none;
+    max-width: none;
+    border-radius: 2px;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.grid-item:hover .portfolio-text-holder,
+.grid-item:focus .portfolio-text-holder {
+    display: flex;
+    opacity: 1;
+    transition: all .5s ease;
+}
+
+.grid-sizer,
+.grid-item {
+    width: 400px;
+    height: 240px;
+    position: relative;
+}
+
+.grid-item:nth-child(4n+1) {
+    width: 250px;
+}
+
+.grid-item:nth-child(4n+2) {
+    width: 325px;
+}
+
+.grid-item:nth-child(4n+3) {
+    width: 180px;
+}
+
+.grid-item:nth-child(4n+4) {
+    width: 380px;
+}
+
+.portfolio-text-holder {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1;
+    font-size: 20px;
+    background-color: white;
+    text-align: center;
+    display: none;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+.portfolio-text {
+    line-height: 100%;
+    margin-bottom: 0;
+}
+
+.portfolio-type {
+    line-height: 100%;
+    font-size: 11px;
+    color: #9a9a9a;
+    padding-top: 0;
+    letter-spacing: 5px;
+    padding-left: 0;
+}
+
+.grid-item a:hover {
+    color: #191919;
+}
+
+.more-posts-portfolio img {
+    transition: all .2s linear;
+    width: 100px;
+    height: 100px;
+}
+
+.more-posts-portfolio img:hover {
+    cursor: pointer;
+    transform: scale(0.9);
+}
+
+div.pp_default .pp_loaderIcon {
+    display: none !important;
+}
+
+.btn_pink {
+    background: white;
+    box-shadow: none;
+    border: 1px solid #f277ae;
+    padding: 8px 20px;
+    color: #f277ae;
+    border-radius: 30px;
+    outline: none;
+    margin-top: 10px;
+}
+
+.btn_pink:hover {
+    background: #f277ae;
+    box-shadow: none;
+    border: 1px solid #f277ae;
+    color: white;
+    outline: none;
+}

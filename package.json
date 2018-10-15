@@ -1,0 +1,25 @@
+{
+  "name": "react_block",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-scripts": "1.1.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "build-fix": "npm run build-rename-js && npm run build-rename-css && npm run build-replace",
+    "build-rename-js": "renamer --find \"/main\\.[^\\.]+\\./i\" --replace \"main.\" build/static/js/*",
+    "build-rename-css": "renamer --find \"/main\\.[^\\.]+\\./i\" --replace \"main.\" build/static/css/*",
+    "build-replace": "replace-in-file \"/service-worker.js\" \"/modules/react_block/build/service-worker.js\" build/static/js/main.js"
+  },
+  "devDependencies": {
+    "axios": "^0.18.0",
+    "renamer": "^1.0.0",
+    "replace-in-file": "^3.4.2"
+  }
+}

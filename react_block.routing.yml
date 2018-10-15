@@ -1,0 +1,7 @@
+react_block.content:
+  path: '/react_block'
+  defaults:
+    _controller: '\Drupal\react_block\Controller\ReactBlock::content'
+    _title: 'React block'
+  requirements:
+    _permission: 'access content'
